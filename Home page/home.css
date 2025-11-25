@@ -1,0 +1,93 @@
+nav{
+    background-color: #000;
+}
+footer{
+    background-color: #000;
+}
+  .navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff !important;
+  }
+
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #ff0000 !important;
+  }
+
+  .dropdown-menu {
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .dropdown-item:hover {
+    background: #f8f9fa;
+    color: #e60000;
+  }
+
+  .btn-danger {
+    background-color: #ff0000 !important;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+
+  .btn-danger:hover {
+    background-color: #cc0000 !important;
+  }
+  /* ----------------------------- */
+/*  DROPDOWN — SHOW ON HOVER     */
+/* ----------------------------- */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------- */
+/*  ANIMATION & TRANSITION       */
+/* ----------------------------- */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.35s ease-in-out;
+
+  /* Glossy / Glassmorphism effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.885);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  padding: 12px 0;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  color: #000;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: 0.25s ease;
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: #e60000;
+  backdrop-filter: blur(18px);
+  border-radius: 8px;
+}
+
+#upper-footer{
+    
+    flex-direction: row;
+}
+
+i:hover{
+   color: #e60000;
+}
