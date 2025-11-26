@@ -1,41 +1,74 @@
-nav{
-    background-color: #000;
+:root {
+  --primary-bg: #fff;
+  /* Main background */
+  --secondary-bg: #f7f7f7;
+  /* Section background (slightly off-white) */
+  --header-bg: #000;
+  /* Header/footer background */
+  --highlight-bg: #e60000;
+  /* Buttons, highlights (red) */
+  --card-bg: #1a1a1a;
+  /* Card overlays, some buttons (near black/grey) */
+
+  --primary-text: #222;
+  /* Main text color (almost black) */
+  --secondary-text: #555;
+  /* Subtitle color */
+  --highlight-text: #e60000;
+  /* Important headings/subtitles (red) */
+  --white-text: #fff;
+  /* Light text on dark backgrounds */
+
+  --button-text: #fff;
+  /* Button text (on red/black backgrounds) */
+  --muted-text: #999;
+  /* Less prominent info */
+
+  --font-family: "Poppins", Arial, Helvetica, sans-serif;
+  /* Your site's clean sans-serif heading body */
 }
-footer{
-    background-color: #000;
+
+nav {
+  background-color: #000;
 }
-  .navbar-nav .nav-link {
-    font-weight: 500;
-    font-size: 16px;
-    color: #fff !important;
-  }
 
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:focus {
-    color: #ff0000 !important;
-  }
+footer {
+  background-color: #000;
+}
 
-  .dropdown-menu {
-    border-radius: 8px;
-    padding: 10px;
-  }
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff !important;
+}
 
-  .dropdown-item:hover {
-    background: #f8f9fa;
-    color: #e60000;
-  }
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ff0000 !important;
+}
 
-  .btn-danger {
-    background-color: #ff0000 !important;
-    border: none;
-    border-radius: 6px;
-    transition: 0.3s;
-  }
+.dropdown-menu {
+  border-radius: 8px;
+  padding: 10px;
+}
 
-  .btn-danger:hover {
-    background-color: #cc0000 !important;
-  }
-  /* ----------------------------- */
+.dropdown-item:hover {
+  background: #f8f9fa;
+  color: #e60000;
+}
+
+.btn-danger {
+  background-color: #ff0000 !important;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: #cc0000 !important;
+}
+
+/* ----------------------------- */
 /*  DROPDOWN — SHOW ON HOVER     */
 /* ----------------------------- */
 @media (min-width: 992px) {
@@ -54,7 +87,7 @@ footer{
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: all 0.35s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   /* Glossy / Glassmorphism effect */
   backdrop-filter: blur(12px);
@@ -83,11 +116,135 @@ footer{
   border-radius: 8px;
 }
 
-#upper-footer{
-    
-    flex-direction: row;
+#upper-footer {
+
+  flex-direction: row;
 }
 
-i:hover{
-   color: #e60000;
+i:hover {
+  color: #e60000;
+}
+
+p,
+h4 {
+  color: var(--muted-text);
+  /* font-size: 0.95rem; */
+}
+
+/* Hero Section */
+#hero-sec {
+  background-color: var(--secondary-bg);
+  padding: 10px 30px 60px 30px;
+  text-align: center;
+}
+
+#hero-heading span {
+  color: var(--highlight-text);
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#hero-cont #hero-heading {
+  font-weight: 900;
+  font-size: 60px;
+  color: var(--header-bg);
+}
+
+#hero-cont h5 {
+  font-size: 20px;
+  color: var(--highlight-text);
+}
+
+#hero-description {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--muted-text);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.search-container {
+  max-width: 700px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 18px 140px 18px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.2);
+}
+
+.search-input::placeholder {
+  color: #8b8b8b;
+}
+
+.search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #b91c1c;
+}
+
+.search-btn i {
+  font-size: 14px;
+}
+#hero-achievements {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+#hero-achievements div{
+  border: 1px solid #fff;
+  background-color: var(--primary-bg);
+  border-radius: 8px;
+  padding: 16px;
+}
+#hero-achievements h6 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--highlight-text);
+}
+#hero-achievements p {
+  font-size: 16px;
+  color: var(--muted-text);
+  margin: 0;
+}
+#hero-achievements div:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e60000;
+  /* transform: translateY(-5px);
+  transition: all 0.3s ease; */
 }
