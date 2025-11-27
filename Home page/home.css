@@ -27,7 +27,7 @@
   --font-family: "Poppins", Arial, Helvetica, sans-serif;
   /* Your site's clean sans-serif heading body */
 }
-
+/* NAVBAR START */
 nav {
   background-color: #000;
 }
@@ -124,7 +124,7 @@ footer {
 i:hover {
   color: #e60000;
 }
-
+/* NAVBAR END  */
 p,
 h4 {
   color: var(--muted-text);
@@ -247,4 +247,5 @@ h4 {
   border: 1px solid #e60000;
   /* transform: translateY(-5px);
   transition: all 0.3s ease; */
+
 }
